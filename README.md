@@ -81,3 +81,34 @@ HTML - Hyper Text Mark Up Language
             </body>
         </html>
     
+    Typography
+    ---------------------------------
+        h1 to h6        heading elements                        block ele
+        p               para                                    block ele
+        b,u,i           bold, underlien and italisized          inline ele
+        strong,em       symatic elements for bold and italics   inline ele   
+        sup,sub                                                 inline ele
+
+        div             container block element
+        
+        nav,header,section
+        footer,article
+        main,aside      symatic container block elements
+        
+        span            inline group element
+
+        kbd, code,
+        date, mail,
+        address,phone   inline group element
+
+    Lists and Tables
+    -----------------------------------
+
+        ul          unordered lists
+            type        circle/dot/square
+        ol          ordered lists
+            type        1/a/i/I/A
+        li          list item
+
+
+    
