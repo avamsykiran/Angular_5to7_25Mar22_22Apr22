@@ -111,22 +111,26 @@ HTML - Hyper Text Mark Up Language
         table                   to create a table
                 border          attribute takes 1 to 5
                 width           attribute takes a value in px/%/em/pt/in/cm
-                heigth          attribute takes a value in px/%/em/pt/in/cm
+                height          attribute takes a value in px/%/em/pt/in/cm
                 cellspacing     attribute takes a valeu in px/%/em/pt/in/cm and controls the spacing between two 
                                 cells
                 cellpadding     attribute takes a valeu in px/%/em/pt/in/cm and controls the spacing between the 
                                 cell border and its content
 
         caption                 sub-element to give a heading to the table
-        tr                      table row is a sub element representing one row
-        th                      table hader cell, a sub-element of tr
+        thead                   sub-element of table element and holds the header rows
+        tfoot                   sub-element of table element and holds the footer rows
+        tbody                   sub-element of table element and holds the data rows
+        tr                      table row is a sub element representing one row and can be used inside
+                                thead / tbody / tfoot / table
+        th                      table header cell, a sub-element of tr
         td                      table data cell, a sub-element of tr
                 rowspan         attribute of th and td representing the number of rows to be occupied default is 1
                 colspan         attribute of th and td representing the number of columns to be occupied default is 1
-       
+
     HTML Media
 
-        img         inline element that injects an image into the page
+        img         inline element that injects an image into the page and is a self-closing element
              src    attribute of img tag to hold the relative or absolute or virtual path 
                     of the image
 
@@ -142,8 +146,8 @@ HTML - Hyper Text Mark Up Language
             src     attribute to hold the web address of the webpage you wish to embed.
 
     HTML Links
-        a           amchor tag 
-            href    attribute takes the target file path.
+        a           anchor tag 
+            href    attribute takes the destination path.
             target  attribute takes _self/_blank/iframeName
 
     HTML Form Elements
