@@ -1,6 +1,5 @@
 //closure: is a function that returns another funciton...
 
-
 class Emp{
     constructor(id,name,sal){
         this.id=id;
@@ -19,7 +18,6 @@ class Emp{
 
 const idClosure = () => { let id = 0; return (() => ++id); }
 const getNextId = idClosure();
-
 
 let e1 = new Emp(getNextId(),"Vamsy",5678);
 let e2 = new Emp(getNextId(),"Rama",5678);

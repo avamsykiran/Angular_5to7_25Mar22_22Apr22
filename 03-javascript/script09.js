@@ -2,7 +2,7 @@
 //these methods are used on a function.
 
 const estimatePaintingCost = function(paintingRate,tax) {
-    return this.area() * paintingRate + (this.area() * paintingRate * tax);
+    return (this.area() * paintingRate) + (this.area() * paintingRate * tax);
 }
 
 class Rectangle {

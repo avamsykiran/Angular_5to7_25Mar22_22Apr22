@@ -1,20 +1,20 @@
 
-function demo(){
+function myFunction(){
     a = 45;
-    var x = 67;
-    if(true){
-        var y=77;
-        console.log(y);
-        let z=99;
-        console.log(z);
-    }
+    var b = 46;
     console.log(a);
-    console.log(x);
-    console.log(y);
-    //console.log(z);
+    console.log(b);
+    if(true){
+        var c = 47;
+        let d = 48;
+        console.log(c);
+        console.log(d);
+    }
+    console.log(c);
+    //console.log(d);
 }
 
-demo();
-console.log(a);
-//console.log(x);
+myFunction();
 
+console.log(a);
+//console.log(b);

@@ -59,14 +59,6 @@ let names = emps.map(e => e.name);
 console.log(names)
 
 console.log(emps.filter(e => e.sal >= 20000))
-/*
-let nums = [1,2,3,4,5]
-let add = (n1,n2) => n1+n2;
-let sum = nums.reduce( add ) //  add(add(add(add(add(1,2),3),4),5)
-*/
 
 let maxSalEmp = emps.reduce( (e1,e2) => e1.sal>e2.sal?e1:e2 )
 console.log(maxSalEmp);
-
-
-

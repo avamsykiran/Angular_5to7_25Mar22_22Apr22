@@ -19,4 +19,3 @@ const greet = (userName,greetProvider) => console.log(greetProvider() + " " + us
 greet("Vamsy Kiran",welcome);
 greet("Vamsy Kiran",greetByTime);
 greet("Vamsy Kiran",() => "Namsthey");
-

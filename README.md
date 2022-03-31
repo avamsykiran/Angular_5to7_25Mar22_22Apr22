@@ -294,6 +294,7 @@ CSS 3
 
                     <tagName class="className">
                     </tagName>
+
             4. Id
                     if a style swhould be applied to an elemnt hving 
                     a specific id, then id selector is sued.
@@ -526,6 +527,11 @@ JavaScript (ES6)
 
             1. javascript inherits it syntx from c and cpp,hence case sensitive
             2. is a dynamically typed language
+                a. variables neewd not be declared
+                b. even if we declare using var/let/const keywords, we dont specfiy the datatype
+                c. the type of a variable is decided after it is assigned a value
+                d. a variable can hold data of different types.
+                
                 integer,floats,strings,null,array,function,undefined
 
         Datatypes
@@ -542,6 +548,54 @@ JavaScript (ES6)
         call backs and closures
 
     Javascript Arrays
+        1. let arr = [];
+        2. let arr = new Array();
+
+        3. arrays are not homoginous
+        4. arrays are not fixed in size
+
+        Array properties
+            arr.length
+
+        Array functions
+            arr.push(ele);
+            arr.pop();
+            arr.concat(anotherArr);
+            arr.splice(startIndex,deleteCount);
+
+        Array Prototype Functions
+            
+            arr.forEach(ele => {}); 
+                //will execute the given callback function on each and every ele of the array
+            
+            arr.sort((ele1,ele2) => { return -1 if ele1<ele2 or return 1 if ele1>ele2 else return 0 })
+                //will sort the array and uses the given callback function to compare.
+                //and the sort function returns the sorted array.
+
+            arr.map(ele => { write code to transform ele to anuthing else and return it })
+                //the map function will execute the givne callback on each ele
+                //of the array and returns a new array containing the transformed values.
+
+                let arr = [1,2,3,4,5];
+                let arr2 = arr.map( ele => ele*ele);
+
+                arr2 will be [1,4,9,16,25]
+
+            arr.reduce((ele1,ele2) => { return any binary output of ele1 and ele2 })
+                //the reduce function will execute the passed binary operation on
+                //first two eles of the array, and then that result paired with third ele
+                //of the array is again passed to the binary operation and son on...
+                //until no more eles left and final reduced value is returned.
+
+                let arr = [1,2,3,4,5];
+                let sum = (n1,n2) => n1+n2;
+
+                arr.reduce(sum); 
+                    //is as smae as 
+                    // sum(sum(sum(sum(arr[0],arr[1]),arr[2]),arr[3]),arr[4])
+                    // which is 15
+
+            
 
     ES6 Enhancements
         Modules
