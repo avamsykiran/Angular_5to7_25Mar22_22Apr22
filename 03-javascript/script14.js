@@ -12,6 +12,11 @@ console.log(`Hello ${c1.name}! It is good to call you at ${c1.mobile}`);
 let {name,mobile} = c1;
 console.log(`Hello ${name}! It is good to call you at ${mobile}`);
 
+/*const printAge = (c) => {
+    let age = (new Date()).getFullYear()-c.dob.getFullYear();
+    console.log(`Hello ${c.name}! You are ${age} years old`);
+};*/
+
 const printAge = ({name,dob}) => {
     let age = (new Date()).getFullYear()-dob.getFullYear();
     console.log(`Hello ${name}! You are ${age} years old`);

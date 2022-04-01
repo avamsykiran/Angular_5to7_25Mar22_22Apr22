@@ -15,7 +15,8 @@ class NumberSeries {
              if(n>this.ub){
                  clearInterval(handle);
              }
-            },500
+            },
+            500
         );
     }
 }

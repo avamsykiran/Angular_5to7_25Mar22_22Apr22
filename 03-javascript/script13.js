@@ -7,8 +7,8 @@ let a2 = [6,7,8,9]
 console.log(a1);
 console.log(a2);
 
-let a3 = [a1,a2];
-console.log(a3);
+let a3 = [a1,a2]; // [[1,2,3,4],[6,7,8,9]]
+console.log(a3); 
 
 let a4 = [...a1,...a2] //let a4 = [1,2,3,4,6,7,8,9]
 console.log(a4);

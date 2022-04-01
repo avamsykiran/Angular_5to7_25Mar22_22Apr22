@@ -612,6 +612,25 @@ JavaScript (ES6)
 
         async, await and Promise
 
+            a Promise is a class whose object accepts a job-function.
+            a job-function accepts two callbacks resolve and resposne and
+                excutes a task asynchronously. it invokes resilve incase of
+                successful completion of the job and invoke reject incase of error.
+
+            let p = new Promise( 
+                (resolve,reject) => {
+                    ....async code will go
+                        if done call resolve
+                        if err call reject
+                }
+            );
+
+            p.then(
+                () => { to respond if job done},
+                () => { to respond if job got error}
+            );
+
+
             define a class that takes a 'count' as a field in its constructor,
             it has to offer a function generateRandomNumbers which returns a promise.
             the generateRandomNumbers function shall generate 'count' number of random

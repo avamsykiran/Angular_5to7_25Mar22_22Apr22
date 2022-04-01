@@ -47,4 +47,3 @@ p3.then(
     msg => console.log(msg),
     err => console.log(err)
 );
-
