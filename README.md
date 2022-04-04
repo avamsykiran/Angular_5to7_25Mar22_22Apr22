@@ -639,6 +639,49 @@ JavaScript (ES6)
             sum of the random number after resolving and shall reject with an error if the
             count is negative...
 
+
+    an assignment
+    --------------------
+    
+        let books = [
+            {bcode:1,title:'Let Us C',price:567.0,dateOfPublication:new Date('2020-01-01')},
+            {bcode:2,title:'Let Us C++',price:1567.0,dateOfPublication:new Date('2020-01-11')},
+            {bcode:3,title:'Java Complete Reference',price:2567.0,dateOfPublication:new Date('2020-03-01')}
+        ]; //bcode,title,price,dateOfPublication
+
+        const service = {
+            addBook: book => {
+                books.push(book);
+            },
+            modifyBook : book => {
+                let index = books.findIndex(b => b.bcode==book.bcode);
+                if(index>-1){
+                    books[index]=book;
+                }else{
+                    throw new Error("No Such Book Found");
+                }
+            },
+            deleteBookById: id => {
+                let index = books.findIndex(b => b.bcode==id);
+                if(index>-1){
+                    books.splice(index,1);
+                }else{
+                    throw new Error("No Such Book Found");
+                }
+            },
+            getAllBooks : () => {
+                return [...books];
+            },
+            getBookById : id => {
+                let book =  books.find(b => b.bcode==id);
+                if(!book){
+                    throw new Error("No Such Book Found");
+                }
+                return {...book};
+            }
+        };
+
+
     Javascript BOM & DOM
 
         Browser Object Model
