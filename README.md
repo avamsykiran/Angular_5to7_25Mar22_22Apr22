@@ -681,7 +681,6 @@ JavaScript (ES6)
             }
         };
 
-
     Javascript BOM & DOM
 
         Browser Object Model
@@ -702,10 +701,6 @@ JavaScript (ES6)
                 alert()
                 prompt()
                 confirm()
-                setInterval()
-                clearInterval
-                setTimeout()
-                clearTimeout()
                 open()
                 close()
 

@@ -41,12 +41,12 @@ const displayItems = () => {
 
         let btn = document.createElement("button");
         btn.textContent = "Delete";
-        btn.addEventListener('click', deleteBtnClicked(item.id));
+        btn.addEventListener('click',deleteBtnClicked(item.id));
         tds[4].appendChild(btn);
 
         let btn2 = document.createElement("button");
         btn2.textContent = "Add to Cart";
-        btn2.addEventListener('click', addToCartBtnClicked(item.id));
+        btn2.addEventListener('click',addToCartBtnClicked(item.id));
         tds[4].appendChild(btn2);
 
         dataTableBody.appendChild(tr);
@@ -66,7 +66,46 @@ const displayItems = () => {
 }
 
 const displayCart =() => {
+    let dataTable = document.querySelector("#cart>table");
 
+    let dataTableBody = document.querySelector("#cart>table>tbody");
+    if (dataTableBody) {
+        dataTable.removeChild(dataTableBody);
+    }
+
+    dataTableBody = document.createElement("tbody");
+
+    cart.forEach(item => {
+        let tr = document.createElement("tr");
+        let tds = [];
+        for (let i = 0; i < 3; i++) {
+            tds.push(document.createElement("td"));
+            tr.appendChild(tds[i]);
+        }
+
+        tds[0].textContent = item.id;
+        //tds[1].textContent = item.qty;
+        tds[2].textContent = item.amt;
+
+        let tb = document.createElement("input");
+        tb.type="number";
+        tb.value=item.qty;
+        tb.addEventListener("change",changeQty(item.id));
+        tds[1].appendChild(tb);
+
+        dataTableBody.appendChild(tr);
+    });
+
+    let tr = document.createElement("tr");
+    let td = document.createElement("td");
+
+    td.textContent = `Total ${cart.length} Item(s) in cart`;
+    td.colSpan = 3;
+
+    tr.appendChild(td);
+    dataTableBody.appendChild(tr);
+
+    dataTable.appendChild(dataTableBody);
 };
 
 const deleteBtnClicked = itemId => event => {
@@ -79,9 +118,24 @@ const deleteBtnClicked = itemId => event => {
     }
 }
 
-const addToCartBtnClicked = itemId => {
-    
+const addToCartBtnClicked = itemId => event => {
+  let itemSelected = items.find(item => item.id==itemId);
+  if(itemSelected){
+      cart.push({id:itemSelected.id,qty:1,amt:itemSelected.rate*1});
+      displayCart();
+  }  
 };
+
+const changeQty = itemId => event => {
+    let stockItem = items.find(item => item.id==itemId);
+    let cartItem = cart.find(item => item.id==itemId);
+    if(stockItem && cartItem){
+        let qty = parseInt(event.target.value);
+        cartItem.qty = qty;
+        cartItem.amt = qty * stockItem.rate; 
+        displayCart();
+    }  
+  };
 
 const addItem = event => {
 
