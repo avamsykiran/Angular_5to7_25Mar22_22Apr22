@@ -719,6 +719,78 @@ JavaScript (ES6)
                 getElementsByName(name)
                 querySelector("css-selector")
 
+    ES Modules
+    -------------------------------------
+
+        requirejs modules
+        commonjs modules
+
+        esm - ecma script modules
+         a module is a single js file.
+         export 
+         import
+
+    NodeJS project
+    -----------------------------
+        npm init -y     //to initilize the current folder into a node project.
+
+        package.json    //is the build config file like pom.xml in mavne/build.gradle in gralde
+
+        npm install     //used to install all the dependencies listed in package.json
+
+        npm install dependency-name --save      //installs the dependency and records in package.json
+        npm install dependency-name --dev-save  //installs the dependency and records in package.json as 
+                                                //development time dependency
+TypeScript
+--------------------------------------------------------------------------
+
+    is a Microsoft developed scripting language, and is developed
+    as an extension to javascript.
+
+    typescript = javascript + datatypes;
+
+    typescript is not understood by any browser nor any javascript runtime.
+
+    have to compile (transpell) typescript to javascript before execution.
+
+    tsc -   typescript compiler
+
+    tsconfig.json   - typescript compiler configuaration
+
+    syntax
+    --------------
+        let varName : type;
+
+        class ClassName {
+            private privateField : number;
+            publicField : string;
+
+            constructor(x:number,y:string){
+                this.privateField=x;
+                this.publicField=y;
+            }
+
+            memberFunction1() : void {
+                //do something here.
+            }
+
+            memberFunction2() : number {
+                let n : number=0;
+                //do something here.
+                return n;
+            }
+        }
+
+        interface Shape {
+            angles : number[];
+            sides : number[];
+            
+            area() : number;
+            perimeter() : number;
+        }
+
+
+
 HTML 5 Javascript API
 ---------------------------------------------------------------------------
         GeoLocation
