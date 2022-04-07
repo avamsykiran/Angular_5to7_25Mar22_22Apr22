@@ -789,8 +789,6 @@ TypeScript
             perimeter() : number;
         }
 
-
-
 HTML 5 Javascript API
 ---------------------------------------------------------------------------
         GeoLocation
