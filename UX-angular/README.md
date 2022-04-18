@@ -260,10 +260,24 @@ Angular
                     date
                     async
                     json
-            c. custome pipes
+            c. custom pipes
 
         Guards              are special case of services, @Injectable
         Interceptors        are special case of services, @Injectable
         ...etc.,
 
     Angular CLI Commands
+
+        ng new proj-name
+
+        proj-name> ng g component component-name
+        proj-name> ng g module module-name
+        proj-name> ng g directive directive-name
+        proj-name> ng g pipe pipe-name
+        proj-name> ng g service service-name
+        proj-name> ng g class class-name
+        proj-name> ng g guard guard-name
+
+        proj-name> ng serve --port 7777 -o
+        proj-name> ng build
+        proj-name> ng test
