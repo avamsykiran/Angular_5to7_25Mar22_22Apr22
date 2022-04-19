@@ -281,3 +281,35 @@ Angular
         proj-name> ng serve --port 7777 -o
         proj-name> ng build
         proj-name> ng test
+
+    Data Binding
+
+        linking the fields and method of a component class in its template is called 
+        data binding.
+
+        Interpolation
+            is rendering an angular expression on to the template.
+
+            {{angular-expression}}
+
+        One-Way Binding
+            Attribute Binding
+
+                [attribute]="field"
+
+                <table width="500px"></table>
+                <table [width]="tableWidth"></table>
+
+            Style Binding
+
+                [style.cssProperty]="field"
+
+            CSS Class Binding
+                
+                [class]="{className1:true,className2:false}"
+
+            Event Binding
+            
+                (event-directive)="method()"
+
+        Two-Way Binding

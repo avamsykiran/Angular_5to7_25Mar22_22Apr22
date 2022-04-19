@@ -1,0 +1,9 @@
+<section class="greet">
+    <div>
+        <img [src]="logo" 
+             [style.width.px]="logoWidth" 
+             [class]="{centered:cFlag,bordered:bFlag,rounded:rFlag}"
+             (dblclick)="changeLogo()"/>
+    </div>
+    <p><strong>Welcome! {{userName}}!</strong></p>
+</section>
