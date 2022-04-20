@@ -313,3 +313,36 @@ Angular
                 (event-directive)="method()"
 
         Two-Way Binding
+
+            is needed only with form elements.
+
+            ngModel is a directive from FormsModule only supports two-way binding.
+
+            this directive can be used only on form elements.
+
+            [(ngModel)]="fieldName"
+
+    Custom Pipes Assignemnt#1
+
+        num = 2120345; //assuming the number will not be greater than one crore
+
+        {{num|group:'3'}} 
+
+        2,120,345
+
+        {{num|group:'2'}}
+
+        21,20,345 
+
+        {{num|group:'1'}}
+
+        2,1,2,0,345
+
+
+    Custom Pipes Assignemnt#2
+
+        num = 12345; //assuming the number will not be greater than one crore
+
+        {{num|inFullWords}} <br />
+
+        Twelve Thousand Three Hundred Forty Five

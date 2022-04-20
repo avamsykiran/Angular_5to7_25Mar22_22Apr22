@@ -1,8 +1,5 @@
 .greet{
     background-color: #aaffaa;
-    border-radius: 1%;
-    padding: 1%;
-    margin: 1%;
 }
 
 .bordered{
@@ -16,4 +13,8 @@
 
 .rounded{
     border-radius: 90%;
+}
+
+.greet div{
+    margin-bottom: 5px;
 }

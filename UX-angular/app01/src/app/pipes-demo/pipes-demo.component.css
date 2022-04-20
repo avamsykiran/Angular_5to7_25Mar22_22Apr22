@@ -1,0 +1,7 @@
+.pd{
+    background-color: #afafaf;
+}
+
+.pd div{
+    columns: 3;
+}

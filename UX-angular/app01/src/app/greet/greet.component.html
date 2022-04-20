@@ -1,4 +1,13 @@
 <section class="greet">
+
+    <div>
+        <input type="text" name="unm" [(ngModel)]="userName"/>
+        <input type="range" min="10" max="1000" value="100" name="iw" [(ngModel)]="logoWidth" />
+        <label><input type="checkbox" name="c1" [(ngModel)]="cFlag"/> Put Image To Center </label>
+        <label><input type="checkbox" name="c2" [(ngModel)]="bFlag"/> Apply Border </label>
+        <label><input type="checkbox" name="c3" [(ngModel)]="rFlag"/> Make Image Rounded </label>
+    </div>
+
     <div>
         <img [src]="logo" 
              [style.width.px]="logoWidth" 
