@@ -1,0 +1,20 @@
+<section class="sdd">
+
+    <div>
+        <label>
+            Friend Name:
+            <input type="text" name="frd" [(ngModel)]="friend" />
+        </label>
+        <button (click)="addFriend()">ADD</button>
+    </div>
+
+    <p *ngIf="!friends || friends.length==0">
+        <strong>No friends yet to display</strong>
+    </p>
+
+    <ol *ngIf="friends && friends.length>0">
+        <li *ngFor="let frd of friends"> 
+            {{frd}} 
+        </li>
+    </ol>
+</section>

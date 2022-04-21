@@ -346,3 +346,12 @@ Angular
         {{num|inFullWords}} <br />
 
         Twelve Thousand Three Hundred Forty Five
+
+    Integrating Bootstrap 5 with Angular
+
+        npm install bootstrap --save
+
+        include the 'node_modules/bootstrap/dist/css/bootstrap.css' in the styles section of angular.json
+        include the 'node_modules/bootstrap/dist/js/bootstrap.js' in the scripts section of angular.json
+
+    
