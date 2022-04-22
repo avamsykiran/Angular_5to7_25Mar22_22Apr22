@@ -1,0 +1,41 @@
+<div class="bg-info p-4">
+    <form>
+        <div class="form-group">
+            <label>AccountHolder Id</label>
+            <input type="number" name="aid" [(ngModel)]="ah.id" class="form-control" required #aid="ngModel" />
+            <ol class="alert alert-danger p-2" *ngIf="aid.invalid && (aid.touched || aid.dirty)">
+                <li *ngIf="aid.errors!['required']">This field is mandate</li>
+            </ol>
+        </div>
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" name="fnm" [(ngModel)]="ah.fullName" class="form-control" 
+             #fnm="ngModel" required minlength="5" maxlength="50"/>
+             <ol class="alert alert-danger p-2" *ngIf="fnm.invalid && (fnm.touched || fnm.dirty)">
+                <li *ngIf="fnm.errors!['required']">This field is mandate</li>
+                <li *ngIf="fnm.errors!['minlength']">Atleast five chars expected</li>
+                <li *ngIf="fnm.errors!['maxlength']">Atmax fifty chars expected.</li>
+            </ol>
+        </div>
+        <div class="form-group">
+            <label>Mail Id</label>
+            <input type="email" name="ml" [(ngModel)]="ah.mailId" class="form-control" #eid="ngModel" required/>            
+            <ol class="alert alert-danger p-2" *ngIf="eid.invalid && (eid.touched || eid.dirty)">
+                <li *ngIf="eid.errors!['required']">This field is mandate</li>
+                <li *ngIf="eid.errors!['email']">A valid email id expected</li>
+            </ol>
+        </div>
+        <div class="form-group">
+            <label>Mobile</label>
+            <input type="text" name="mob" [(ngModel)]="ah.mobile" class="form-control" 
+             #mob="ngModel" required pattern="[1-9][0-9]{9}"/>
+             <ol class="alert alert-danger p-2" *ngIf="mob.invalid && (mob.touched || mob.dirty)">
+                <li *ngIf="mob.errors!['required']">This field is mandate</li>
+                <li *ngIf="mob.errors!['pattern']">Exactly ten digits are allowed.The first digit must be non-zero.</li>
+            </ol>
+        </div>
+        <div class="d-grid mt-1">
+            <button class="btn btn-primary">Save Record</button>
+        </div>
+    </form>
+</div>

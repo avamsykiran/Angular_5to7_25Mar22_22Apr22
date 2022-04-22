@@ -353,5 +353,22 @@ Angular
 
         include the 'node_modules/bootstrap/dist/css/bootstrap.css' in the styles section of angular.json
         include the 'node_modules/bootstrap/dist/js/bootstrap.js' in the scripts section of angular.json
-
     
+    Angular Forms
+
+        Template Driven Forms
+
+            1. are constructed completly in the template
+            2. these forms are bound to the component data-memebers using ngModel directive from FormsModule
+            3. these forms are simple and are limited in functionality.
+            4. these forms depend on the html 5 validations api for data validation.
+            5. ngModel directive creates an object each for one input field.
+            6. ngModel directive has properties like
+                valid
+                invalid
+                dirty
+                prestine
+                touched
+                errors
+
+        Model Driven Forms / Reactive forms

@@ -1,0 +1,30 @@
+<h3>Account Holders</h3>
+
+<p *ngIf="!ahs || ahs.length==0" class="alert alert-info p-2">
+    <strong>No data available to display</strong>
+</p>
+
+<table class="table table-bordered table-striped table-hover" *ngIf="ahs && ahs.length>0">
+    <thead>
+        <tr>
+            <th>Ah#</th>
+            <th>Full Name</th>
+            <th>Mobile</th>
+            <th>Mail Id</th>
+            <th>Balance</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ah of ahs">
+            <td>{{ah.id|number:'3.0-0'}}</td>
+            <td>{{ah.fullName|uppercase}}</td>
+            <td>{{ah.mobile}}</td>
+            <td>{{ah.mailId}}</td>
+            <td>{{ah.currentBalance|currency:'INR'}}</td>
+            <td>
+                <button class="btn btn-sm btn-danger" (click)="del(ah.id)">DELETE</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
