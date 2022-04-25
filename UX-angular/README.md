@@ -354,6 +354,37 @@ Angular
         include the 'node_modules/bootstrap/dist/css/bootstrap.css' in the styles section of angular.json
         include the 'node_modules/bootstrap/dist/js/bootstrap.js' in the scripts section of angular.json
     
+    Routing
+
+        is a way where each component can be mapped to a url.
+        and the component is rendered only when that url is visited.
+
+        RouterModule
+
+            Route           path:'url',
+                            component:ComponentToWhichTheMappingIsBeingMade,
+                            pathMatch:'full|startsWith',
+                            redirectTo:'',
+                            children:[],
+                            canActivate:[],
+                            canLoad:[],
+                            canDeactivate:[]
+
+            Routes          an array of Route objects
+
+            forRoot(RoutesObject)
+            forChild(RoutesObject)
+
+            router-outlet   is a component that reserve place for the routed components
+                            in the parent component template, to be replaced while
+                            navigating.
+
+            routerLink          is a directive of 'a' element instead of 'href' attribute.
+            routerLinkActive    is a directive that takes a css-class. that css class si applied only active link.
+
+            Router              is a service offering the methods
+                                navigateByUrl('')
+                                navigate(urlTree)
     Angular Forms
 
         Template Driven Forms
