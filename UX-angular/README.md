@@ -416,3 +416,29 @@ Angular
                 prestine
                 touched
                 errors
+
+    Angular Component Inter-Communication
+
+        Parent-Child Communication
+
+            <parent-comp>
+                <child-comp></child-comp>
+                <child-comp></child-comp>
+                <child-comp></child-comp>
+            </parent-comp>
+
+            parent can share data with child through 'attributes'
+
+                @Input()    is used on a field of a component to turn the field into an attribute
+
+                @Component({'selector':'cmp1'})
+                class MyComponent{
+                    @Input()
+                    title:string;
+                }
+
+                <cmp1 title=""></cmp1>
+
+            child can emit data thgough events and the parent can handle those events to receive the data.
+
+        General Component Communication

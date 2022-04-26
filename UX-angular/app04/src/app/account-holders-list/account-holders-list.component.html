@@ -1,0 +1,11 @@
+<div class="col-10 mx-auto">
+    <h3>Account Holders</h3>
+
+    <p *ngIf="!ahs || ahs.length==0" class="alert alert-info p-2">
+        <strong>No data available to display</strong>
+    </p>
+
+    <div class="row row-cols-1 row-cols-md-3 g-2" *ngIf="ahs && ahs.length>0">
+        <app-account-holder-details *ngFor="let x of ahs" class="col" [ah]="x"></app-account-holder-details>
+    </div>
+</div>
