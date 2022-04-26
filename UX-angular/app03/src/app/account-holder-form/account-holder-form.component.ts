@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AccountHolder } from '../models/account-holder';
 import { AccountHolderService } from '../services/account-holder.service';
 
 @Component({
@@ -10,14 +10,26 @@ import { AccountHolderService } from '../services/account-holder.service';
 })
 export class AccountHolderFormComponent   {
 
-  ah:AccountHolder;
+  idFC:FormControl;
+  fullNameFC:FormControl;
+  mobileFC:FormControl;
+  mailIdFC:FormControl;
+
+  ahForm:FormGroup;
 
   constructor(private ahService:AccountHolderService,private router:Router) {
-    this.ah={id:0,fullName:'',mobile:'',mailId:'',currentBalance:0};
+    this.idFC=new FormControl(0,[Validators.required,Validators.min(1)]);
+    this.fullNameFC=new FormControl('',[Validators.required,Validators.minLength(5),Validators.maxLength(50)]);
+    this.mobileFC=new FormControl('',[Validators.required,Validators.pattern('[1-9][0-9]{9}')]);
+    this.mailIdFC=new FormControl('',[Validators.required,Validators.email]);
+
+    this.ahForm = new FormGroup({
+      id:this.idFC,fullName:this.fullNameFC,mobile:this.mobileFC,mailId:this.mailIdFC
+    });
   }
 
   save(){
-    this.ahService.add(this.ah);
+    this.ahService.add({...this.ahForm.value,currentBalance:0});
     this.router.navigateByUrl('/list');
   }
 

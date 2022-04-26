@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule,Routes } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AccountHoldersListComponent } from './account-holders-list/account-holders-list.component';
 import { AccountHolderFormComponent } from './account-holder-form/account-holder-form.component';
-import { FormsModule } from '@angular/forms';
 
 const routes : Routes = [
   {path:'',pathMatch:'full',redirectTo:'/list'},
@@ -21,7 +21,7 @@ const routes : Routes = [
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

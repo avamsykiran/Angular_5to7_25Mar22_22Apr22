@@ -403,3 +403,16 @@ Angular
                 errors
 
         Model Driven Forms / Reactive forms
+
+            1. are constructed partly in the component and linked to its template form.
+            2. these forms need not be bound to any datamembers, but will retain the data in its internal model.
+            3. these forms are advanced and serve complex situations like nested forms.
+            4. these forms depend on angular defined validation framework.
+            5. the validation framework and FormControls and FormBuilders come from ReactiveFormsModule
+            6. The FormControl has the below properties to maanage validation messages
+                valid
+                invalid
+                dirty
+                prestine
+                touched
+                errors
