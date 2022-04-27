@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { AccountHolder } from '../models/account-holder';
 
 @Component({
@@ -11,6 +11,14 @@ export class AccountHolderDetailsComponent   {
   @Input()
   ah!:AccountHolder;
 
-  constructor() { }
+  @Output()
+  delAccount:EventEmitter<number>;
 
+  constructor() {
+    this.delAccount=new EventEmitter<number>();
+  }
+
+  del(){
+    this.delAccount.emit(this.ah.id);
+  }
 }

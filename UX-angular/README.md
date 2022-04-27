@@ -442,3 +442,32 @@ Angular
             child can emit data thgough events and the parent can handle those events to receive the data.
 
         General Component Communication
+
+    rxjs
+        ReactiveX JS
+
+        Observable     is an enhanced Promise
+
+        let p = new Promise((resolve,reject)=>{
+            //resolve is called to indicate successful completion
+            //reject is called to indicate error
+        })
+
+        p.then(
+            (val)=>{//success callback},
+            (err)=>{//error callback}
+        )
+
+        let ob = new Observable((observer)=>{
+            //observer.next(val)  can emit values continuosly from the job.
+            //observer.error(err) is as smae as 'reject'
+            //observer.complete() is as smae as 'resolve'
+        })
+
+        ob.subscribe(
+            (val) => {//callback is in resposne to next},
+            (err) => {//callback is in response to error},
+            () => {//callback is in response to complete}
+        )
+
+

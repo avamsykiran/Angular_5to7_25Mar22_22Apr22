@@ -1,9 +1,9 @@
 <div class="card card-info">
     <div class="card-body">
         <h6>{{ah.fullName}}</h6>
-        <p>{{ah.mobile}} | {{ah.mailId}} | <strong>{{ah.currentBalance|currency:'INR'}}</strong></p>
+        <p>{{ah.mobile}} <br/> {{ah.mailId}} <br/> <strong>{{ah.currentBalance|currency:'INR'}}</strong></p>
     </div>
     <div class="card-footer text-end">
-        <button class="btn btn-sm text-danger">DELETE</button>
+        <button class="btn btn-sm text-danger" (click)="del()">DELETE</button>
     </div>
 </div>

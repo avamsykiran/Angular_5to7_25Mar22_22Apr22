@@ -1,0 +1,17 @@
+<div class="card card-primary m-4">
+    <div class="card-header">
+        <form (ngSubmit)="generate()">
+            <label>Lower Bound: </label>
+            <input type="number" name="lb" [(ngModel)]="lb" />
+            <label>Upper Bound: </label>
+            <input type="number" name="ub" [(ngModel)]="ub" />
+            <button class="btn btn-sm btn-primary" [disabled]="!isComplete">GENERATE</button>
+        </form>
+    </div>
+    <div class="card-body" *ngIf="errMsg || results">
+        <p *ngIf="errMsg"><strong>{{errMsg}}</strong></p>
+        <p *ngIf="results && results.length>0">
+            <span *ngFor="let v of results">{{v}}, </span>
+        </p>
+    </div>
+</div>

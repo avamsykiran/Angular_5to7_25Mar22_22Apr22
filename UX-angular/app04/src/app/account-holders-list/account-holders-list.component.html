@@ -6,6 +6,11 @@
     </p>
 
     <div class="row row-cols-1 row-cols-md-3 g-2" *ngIf="ahs && ahs.length>0">
-        <app-account-holder-details *ngFor="let x of ahs" class="col" [ah]="x"></app-account-holder-details>
+        <app-account-holder-details 
+            *ngFor="let x of ahs" 
+            class="col" 
+            (delAccount)="del($event)"
+            [ah]="x">
+        </app-account-holder-details>
     </div>
 </div>
