@@ -470,4 +470,15 @@ Angular
             () => {//callback is in response to complete}
         )
 
+    HttpClientModule
+    
+        HttpClient
+            get(url) : Observable
+            put(url,reqBody):Observable
+            post(url,reqBody):Observable
+            delete(url):Observable
+
+        json-server
+            accept a .json file and generate fake rest api on the data inside the given .json
+
 

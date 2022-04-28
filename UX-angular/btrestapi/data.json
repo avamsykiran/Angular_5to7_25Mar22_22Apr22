@@ -1,0 +1,46 @@
+{
+  "ahs": [
+    {
+      "id": 1,
+      "fullName": "Vamsy Kiran Aripaka",
+      "mobile": "9052224753",
+      "mailId": "vamsy@gmail.com",
+      "currentBalance": 0
+    },
+    {
+      "id": 2,
+      "fullName": "Suseela Aripaka",
+      "mobile": "9051114753",
+      "mailId": "susy@gmail.com",
+      "currentBalance": 0
+    },
+    {
+      "id": 3,
+      "fullName": "Indhikaa Aripaka",
+      "mobile": "9053334753",
+      "mailId": "indu@gmail.com",
+      "currentBalance": 0
+    },
+    {
+      "id": 4,
+      "fullName": "Sagar Aripaka",
+      "mobile": "9054444753",
+      "mailId": "sagar@gmail.com",
+      "currentBalance": 0
+    },
+    {
+      "id": 5,
+      "fullName": "Srinivas Dachepalli",
+      "mobile": "9055554753",
+      "mailId": "srinu@gmail.com",
+      "currentBalance": 0
+    },
+    {
+      "id": 6,
+      "fullName": "Deepa Dachepalli",
+      "mobile": "8888888888",
+      "mailId": "deepa@gmail.com",
+      "currentBalance": 0
+    }
+  ]
+}
