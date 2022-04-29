@@ -417,9 +417,7 @@ Angular
                 touched
                 errors
 
-    Angular Component Inter-Communication
-
-        Parent-Child Communication
+    Angular Component Inter-Communication  Parent-Child
 
             <parent-comp>
                 <child-comp></child-comp>
@@ -440,8 +438,6 @@ Angular
                 <cmp1 title=""></cmp1>
 
             child can emit data thgough events and the parent can handle those events to receive the data.
-
-        General Component Communication
 
     rxjs
         ReactiveX JS
@@ -480,5 +476,52 @@ Angular
 
         json-server
             accept a .json file and generate fake rest api on the data inside the given .json
+
+    Angular Component Inter-Communication  Non-Parent-Child
+
+        Service act like a bridge of communication 
+        for unconnected components .
+
+        As long as the providedIn:'root' of @Injectable decorator
+        of a service is true, we will have only one object of the service
+        for the whole angular app. A component can write a value to 
+        any field of that service, and another compoentn can read
+        that field value.
+
+        Subject is a type of Observable from 'rxjs' is used by a compoent 
+        to notify another component of an event. AddItemComponent can call next()
+        method on the subject and NavBarComponent can subscribe to the subject
+        to get notified of the item count in the shopping cart.
+
+    Angular Modules
+
+        1. Root Module
+        2. Sub-Module / Feature Module
+            a. Domain Module        
+            b. Service Module
+            c. Routing Module
+            d. Routed Module
+            e. Widget Module
+            f. Shared Module
+
+
+        Domain Module       is used to represent one domain aspect of an app
+                            For a e-commerce app, sales, inventory, order ..etc are domains
+                            For a ERP project employee-profiles, accounts, timesheets ..etc are domains
+                            For a banking project accounts, loans, cards ..etc are domains
+
+        Service Module      is used to represent a group of services.
+
+        Routing Module      is used to hold the router configuaration.
+
+        Routed Module       is any module that consumes the routing module.
+
+        Widget Module       is a collection of components/pipes/directive
+                            that can be used across the current project and 
+                            other projects as well.
+
+        Shared Module       is a collection of components/pipes/directive
+                            that can be used by other moduels of the same project.
+
 
 
