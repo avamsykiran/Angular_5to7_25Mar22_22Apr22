@@ -504,7 +504,6 @@ Angular
             e. Widget Module
             f. Shared Module
 
-
         Domain Module       is used to represent one domain aspect of an app
                             For a e-commerce app, sales, inventory, order ..etc are domains
                             For a ERP project employee-profiles, accounts, timesheets ..etc are domains
