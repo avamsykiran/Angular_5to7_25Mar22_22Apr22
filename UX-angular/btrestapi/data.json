@@ -43,22 +43,22 @@
       "currentBalance": 0
     }
   ],
-  "txns":[
+  "txns": [
     {
-      "id":1,
-      "header":"Salary",
-      "amount":60000,
-      "type":"CREDIT",
-      "txnDate":"2022-05-01",
-      "ahId":1
+      "id": 1,
+      "header": "Salary",
+      "amount": 60000,
+      "type": "CREDIT",
+      "txnDate": "2022-05-01",
+      "ahId": 1
     },
     {
-      "id":2,
-      "header":"Rent",
-      "amount":10000,
-      "type":"DEBIT",
-      "txnDate":"2022-05-01",
-      "ahId":1
+      "id": 2,
+      "header": "Rent",
+      "amount": 10000,
+      "type": "DEBIT",
+      "txnDate": "2022-05-01",
+      "ahId": 1
     }
   ]
 }

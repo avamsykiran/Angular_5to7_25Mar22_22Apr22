@@ -32,7 +32,7 @@ export class AccountHolderFormComponent  {
 
   save(){
     this.ahService.add({...this.ahForm.value,currentBalance:0}).subscribe(
-      data => this.router.navigateByUrl('/list'),
+      data => this.router.navigateByUrl('/ahs/list'),
       err => {console.log(err); this.errMsg="Unable to save, please retry later!"}
     );
   }

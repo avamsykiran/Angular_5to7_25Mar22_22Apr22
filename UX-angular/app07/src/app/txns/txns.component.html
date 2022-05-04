@@ -1,1 +1,39 @@
-<p>txns works!</p>
+<div class="container-fluid p-4 m-4">
+
+    <p *ngIf="!ah && !errMsg" class="alert alert-info p-2">
+        <strong>Data being loaded, please wait....</strong>
+    </p>
+
+    <p *ngIf="errMsg" class="alert alert-danger p-2">
+        <strong>{{errMsg}}</strong>
+    </p>
+
+    <div *ngIf="ah">
+        <div class="card">
+            <div class="card-header">
+                <h6>Profile</h6>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <tr style="font-weight:bold">
+                        <td>#{{ah.id}}</td>
+                        <td>{{ah.fullName|uppercase}}</td>
+                        <td>{{ah.mailId}}</td>
+                        <td>{{ah.mobile}}</td>
+                        <td>{{ah.currentBalance|currency:'INR'}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+        <div class="card mt-2">
+            <div class="card-header">
+                <h6>Statement</h6>
+            </div>
+            <div class="card-body">
+                <app-statement [ahid]="ah.id"></app-statement>
+            </div>
+        </div>
+    
+    </div>    
+</div>

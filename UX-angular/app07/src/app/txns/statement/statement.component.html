@@ -1,1 +1,34 @@
-<p>statement works!</p>
+
+
+<p *ngIf="!txns && !errMsg" class="alert alert-info p-2">
+    <strong>Data being loaded, please wait....</strong>
+</p>
+
+<p *ngIf="errMsg" class="alert alert-danger p-2">
+    <strong>{{errMsg}}</strong>
+</p>
+
+<p *ngIf="txns && txns.length==0" class="alert alert-danger p-2">
+    <strong>Nio transactions made yet!</strong>
+</p>
+
+<table class="table table-border" *ngIf="txns && txns.length>0" >
+    <thead>
+        <tr>
+            <th>TxnId</th>
+            <th>Txn Date</th>
+            <th>Header</th>
+            <th>Credit</th>
+            <th>Debit</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let t of txns">
+            <td>{{t.id}}</td>
+            <td>{{t.txnDate|date:'dd-MMM-yyyy'}}</td>
+            <td>{{t.header}}</td>
+            <td>{{t.type==='CREDIT'?t.amount:''}}</td>
+            <td>{{t.type==='DEBIT'?t.amount:''}}</td>
+        </tr>
+    </tbody>
+</table>
