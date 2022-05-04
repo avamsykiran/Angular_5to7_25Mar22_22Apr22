@@ -1,15 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { AccountHolder } from 'src/app/shared/account-holder';
 
 @Component({
   selector: 'app-account-holder-details',
   templateUrl: './account-holder-details.component.html',
   styleUrls: ['./account-holder-details.component.css']
 })
-export class AccountHolderDetailsComponent implements OnInit {
+export class AccountHolderDetailsComponent   {
 
-  constructor() { }
+  @Input()
+  ah!:AccountHolder;
 
-  ngOnInit(): void {
+  @Output()
+  delAccount:EventEmitter<number>;
+
+  constructor() {
+    this.delAccount=new EventEmitter<number>();
   }
 
+  del(){
+    this.delAccount.emit(this.ah.id);
+  }
 }

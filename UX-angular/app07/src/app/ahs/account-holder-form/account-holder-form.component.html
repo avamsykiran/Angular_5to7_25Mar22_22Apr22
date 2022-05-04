@@ -1,1 +1,45 @@
-<p>account-holder-form works!</p>
+<div class="col-4 mx-auto bg-info p-4 m-4">
+    <h4>New Account Holder</h4>
+
+    <p *ngIf="errMsg" class="alert alert-danger p-2">
+        <strong>{{errMsg}}</strong>
+    </p>
+
+    <form class="p-2" (ngSubmit)="save()" [formGroup]="ahForm">
+        <div class="form-group">
+            <label>AccountHolder Id</label>
+            <input type="number" class="form-control" formControlName="id" />
+            <ol class="alert alert-danger p-2" *ngIf="idFC.invalid && (idFC.touched || idFC.dirty)">
+                <li *ngIf="idFC.errors!['required']">This field is mandate</li>
+            </ol>
+        </div>
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" class="form-control" formControlName="fullName" />
+             <ol class="alert alert-danger p-2" *ngIf="fullNameFC.invalid && (fullNameFC.touched || fullNameFC.dirty)">
+                <li *ngIf="fullNameFC.errors!['required']">This field is mandate</li>
+                <li *ngIf="fullNameFC.errors!['minlength']">Atleast five chars expected</li>
+                <li *ngIf="fullNameFC.errors!['maxlength']">Atmax fifty chars expected.</li>
+            </ol>
+        </div>
+        <div class="form-group">
+            <label>Mail Id</label>
+            <input type="email" class="form-control" formControlName="mailId" />            
+            <ol class="alert alert-danger p-2" *ngIf="mailIdFC.invalid && (mailIdFC.touched || mailIdFC.dirty)">
+                <li *ngIf="mailIdFC.errors!['required']">This field is mandate</li>
+                <li *ngIf="mailIdFC.errors!['email']">A valid email id expected</li>
+            </ol>
+        </div>
+        <div class="form-group">
+            <label>Mobile</label>
+            <input type="text" class="form-control" formControlName="mobile" />
+             <ol class="alert alert-danger p-2" *ngIf="mobileFC.invalid && (mobileFC.touched || mobileFC.dirty)">
+                <li *ngIf="mobileFC.errors!['required']">This field is mandate</li>
+                <li *ngIf="mobileFC.errors!['pattern']">Exactly ten digits are allowed.The first digit must be non-zero.</li>
+            </ol>
+        </div>
+        <div class="d-grid mt-1">
+            <button class="btn btn-primary" [disabled]="ahForm.invalid">Save Record</button>
+        </div>
+    </form>
+</div>
